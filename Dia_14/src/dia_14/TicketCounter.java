@@ -15,7 +15,7 @@ public class TicketCounter {
         this.availableTickets = availableTickets;
     }
 
-    public synchronized void buyTicket(String buyerName) {
+    public synchronized void buyTicket(String buyerName) { // para hacerlo sin sincronizacion se le quita el "synchronized"
         if (availableTickets > 0) {
             System.out.println(buyerName + " ha comprado una entrada.");
             availableTickets--;
